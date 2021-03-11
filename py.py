@@ -35,3 +35,10 @@ import heapq
 pq = []
 heapq.heappush(pq, child)  # push
 next = heapq.heappop(pq)   # pop
+
+# sort with suctom comparator
+import functools
+def comp(a, b):
+  ...  # return 1 if a > b, -1 if a < b, 0 if a == b
+
+some_list.sort(key=functools.cmp_to_key(comp))
